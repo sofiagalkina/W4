@@ -1,0 +1,201 @@
+body {
+    background-color: #05232e;
+}
+
+.animation{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    background-color: #16707b;
+    width: 200px;
+    height: 200px;
+}
+
+.box-1{
+
+  position: relative;
+}
+
+.circle{
+    margin: 6px;
+    height: 40px;
+    width: 40px;
+    background-color: #de4e58;
+    border-radius: 50%;
+
+    /* ANIMATION #1 PROPERTIES */
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: moveCircle 3s linear infinite;
+}
+
+
+/* FIRST ANIMATION */
+
+
+@keyframes moveCircle {
+    0% {
+      top: 0;
+      left: 0;
+    }
+    25% {
+      top: 0;
+      left: 150px;
+    }
+
+    50% {
+      top: 150px;
+      left: 150px;
+    }
+
+    75% {
+      top: 150px;
+      left: 0;
+    }
+
+    100% {
+      top: 0;
+      left: 0;
+    }
+
+  }
+
+
+  /* SECOND ANIMATION */
+
+  .box-2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circle-2{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #de4e58;
+
+   
+    /* centering circle within the square: */
+    /* position: relative;
+    top: 50%;
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
+
+    animation: squareRotate 2.5s linear infinite;
+   
+  }
+
+  @keyframes squareRotate{
+      25% {
+        border-radius: 50%;
+      }
+      50% {
+        transform: rotate(0deg);
+        border-radius: 0%;
+        background-color: aliceblue;
+      }
+      75%{
+        transform: rotate(180deg);
+      }
+      100%{
+        transform: rotate(280deg);
+        border-radius: 50%;
+        background-color: #de4e58;
+      }
+      
+
+      
+  }
+
+
+  /* THIRD ANIMATION */
+
+
+  .box-3{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .half-circle-1{
+    position: absolute; 
+    left: 100px;
+
+    height: 25px; 
+    width: 45px; 
+    border-radius: 150px 150px 0 0; 
+    background-color: #de4e58; 
+    rotate: 90deg;
+
+    animation: unite-right 2s linear infinite;
+
+  }
+
+  .half-circle-2{
+    position: absolute; 
+    left: 55px;
+
+    height: 25px; 
+    width: 45px; 
+    border-radius: 150px 150px 0 0; 
+    background-color: #de4e58;  
+    rotate: -90deg;
+
+    animation: unite-left 2s linear infinite;
+
+  }
+
+  @keyframes unite-right{
+    0%{
+      transform: translateY(0px);
+    }
+    100%{
+      transform: translateY(10px);
+    }
+  }
+
+  @keyframes unite-left {
+    
+    100%{
+      transform: translateY(14px);
+    }
+  }
+
+
+  /* FOURTH ANIMATION */
+
+
+  .box-4{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .circle-4{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #de4e58;
+
+    animation: pulse 1s linear infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+  100% {
+      transform: scale(1);
+  }
+  }
